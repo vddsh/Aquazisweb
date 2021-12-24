@@ -22,6 +22,8 @@ code {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  color: #212529;
+  font-weight: 600;
 }
 :focus,
 :active {
@@ -41,7 +43,6 @@ aside {
 
 html,
 body {
-  color: #212529;
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -88,12 +89,17 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 /*--------------------*/
 
+/*Global*/
 .container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+/*--------*/
