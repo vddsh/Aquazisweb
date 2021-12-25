@@ -4,6 +4,7 @@
 
 .slickslider__row {
   margin: 50px;
+  overflow: hidden;
 }
 
 .slickslider__img {
@@ -11,6 +12,10 @@
   height: 180px;
   opacity: 0.6;
   position: relative;
+}
+.slick-arrow {
+  display: none;
+  background-color: black;
 }
 
 .slick-center {
@@ -73,4 +78,24 @@
 }
 
 @media (max-width: 768px) {
+  .slick-center {
+    transform: scale(1);
+    position: relative;
+    z-index: 1;
+  }
+  .slickslider__row {
+    margin: 0px;
+  }
+  .slickslider__row img {
+    margin-left: 21px;
+  }
+
+  .slick-center img {
+    opacity: 1;
+    animation: none;
+  }
+
+  .slickslider__img {
+    opacity: 1;
+  }
 }
