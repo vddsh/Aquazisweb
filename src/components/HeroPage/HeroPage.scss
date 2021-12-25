@@ -134,7 +134,28 @@
     font-style: italic;
   }
 }
+/*-------------*/
 
+/*Slider Section*/
+.slider {
+  margin-bottom: 80px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.slider__head {
+  font-size: 1.75rem;
+  margin: 50px 0;
+}
+.slider__info a {
+  color: blue;
+}
+.slider__component {
+  max-height: 400px;
+  overflow: hidden;
+}
+.slider__info {
+  padding-bottom: 20px;
+}
 /*-------------*/
 
 /*Mobile version*/
