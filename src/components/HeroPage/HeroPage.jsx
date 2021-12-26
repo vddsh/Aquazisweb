@@ -168,6 +168,69 @@ function HeroPage() {
           </div>
         </div>
       </section>
+      <section className="install">
+        <div className="container">
+          <div className="install__row">
+            <div className="install__head">
+              <h3 className="install__head-header">
+                Различные способы инсталяции
+              </h3>
+              <p className="install__head-text">
+                Расчитываем размеры вашего освещения до миллиметра, можем
+                одновременно сделать несколько вариантов инсталяции для
+                дальнейшей удобной эксплуатации
+              </p>
+            </div>
+            <div className="install__type">
+              <img src="./img/install-1.jpg"></img>
+              <p className="install__discr">Ножки из нержавеющей стали</p>
+            </div>
+            <div className="install__type padd">
+              <img src="./img/install-2.jpg"></img>
+              <p className="install__discr">Подвесной крепеж</p>
+            </div>
+            <div className="install__type">
+              <img src="./img/install-3.jpg"></img>
+              <p className="install__discr">Акриловые ножки (вариант 1)</p>
+            </div>
+            <div className="install__type padd">
+              <img src="./img/install-4.jpg"></img>
+              <p className="install__discr">Акриловые ножки (вариант 2)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="ref">
+        <div className="container">
+          <div className="ref__row">
+            <h3 className="ref__head">Просчет LED-освещения</h3>
+            <p className="ref__text">
+              Возпользуйся конструктором в который мы перенесли весь наш опыт и
+              знания
+            </p>
+            <a className="ref__button btn">Собрать светильник</a>
+          </div>
+        </div>
+      </section>
+      <section className="footer">
+        <div className="container">
+          <h3 className="footer__head">Контакты</h3>
+          <div className="footer__row">
+            <div>
+              <i className="fas fa-mobile-alt"></i>
+              <a className="fotter__inf">+38 (095) 249-77-51</a>
+            </div>
+            <div>
+              <i className="fas fa-envelope"></i>
+              <a className="fotter__inf">info@aquazis.com</a>
+            </div>
+            <div>
+              <i className="fas fa-map-marker-alt"></i>
+              <a className="fotter__inf">Ukraine, Kiev</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
