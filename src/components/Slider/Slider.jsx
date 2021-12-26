@@ -3,26 +3,26 @@ import Slider from "react-slick";
 import "./Slider.scss";
 
 export default class SimpleSlider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { width: props.width };
-  }
-
-  componentWillMount() {
-    this.setState({ width: window.innerWidth });
-  }
-
   render() {
-    const widthSize = this.state.width >= 768 ? 3 : 1;
     const settings = {
       centerMode: true,
       centerPadding: "0px",
       infinite: true,
-      slidesToShow: widthSize,
+      slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 10000,
+      autoplaySpeed: 2000,
       swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          },
+        },
+      ],
     };
     return (
       <div className="slickslider">

@@ -106,6 +106,68 @@ function HeroPage() {
           </div>
         </div>
       </section>
+      <section className="app">
+        <div className="container">
+          <div className="app__row">
+            <div className="app__box">
+              <div className="app__text-row">
+                <h3 className="app__head">Простейшее управление</h3>
+                <p className="app__text">
+                  Мы знаем, насколько важно правильно настроить спектр в вашем
+                  любимом аквариуме, что бы все его обитатели чувствовали себя в
+                  природной среде.
+                </p>
+                <p className="app__text">
+                  Учитывая все ваши пожелания, мы разработали максимально
+                  удобное решения которое позволяет быстро настроить нужный вам
+                  спектр для аквариума.
+                </p>
+                <ol className="app__info">
+                  <li className="app__info-text right">Любое устройство</li>
+                  <li className="app__info-text left">
+                    Работает без интернета
+                  </li>
+                  <li className="app__info-text right">Интуитивно понятный</li>
+                </ol>
+              </div>
+            </div>
+            <div className="app__box">
+              <img src="./img/app.jpg" className="app__img"></img>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="profile">
+        <div className="container">
+          <div className="profile__row">
+            <div className="profile__box">
+              <img src="./img/profile.jpg" className="profile__img"></img>
+            </div>
+            <div className="profile__box">
+              <div className="profile__text-row">
+                <h3 className="profile__head">Изящный алюминиевый профиль</h3>
+                <p className="profile__text">
+                  Современный, эффективный, удобный в эксплуатации профиль,
+                  созданный для эффективного отвода тепла от светодиодов,
+                  драйверов и контроллеров.
+                </p>
+                <p className="profile__text">
+                  Специальные конструктивные элементы в профиле, позволяют
+                  скрывать провода и кабель при монтаже.
+                </p>
+                <p className="profile__text">
+                  Различные варианты установки светильника, позволяют
+                  использовать раздвижные нержавеющие или акриловые ножки, а так
+                  же подвесной тип инсталяции.
+                </p>
+                <p className="profile__text profile__text-grey">
+                  Разработано специально для Aquazis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
