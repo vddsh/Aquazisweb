@@ -3,7 +3,8 @@ import "./HeroPage.scss";
 import Background from "../../images/hero.jpg";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import SimpleSlider from "../Slider/Slider";
+import ImageSlider from "../Slider/Slider";
+import { IMAGES } from "../Slider/Slider";
 
 function HeroPage() {
   useEffect(() => {
@@ -97,7 +98,7 @@ function HeroPage() {
             <h3>Наши работы</h3>
           </div>
           <div className="slider__component">
-            <SimpleSlider />
+            <ImageSlider images={IMAGES} slidesToShow={3} />
           </div>
           <div className="slider__info">
             <p>
