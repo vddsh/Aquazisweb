@@ -2,7 +2,6 @@
   transform: scale(0.7);
   transition: transform 300ms;
   opacity: 0.5;
-  overflow: hidden;
 }
 
 .slideWrapper {
@@ -31,4 +30,8 @@
   transform: scale(1.5);
   position: relative;
   z-index: 1;
+}
+
+.slick-slider {
+  overflow: none;
 }

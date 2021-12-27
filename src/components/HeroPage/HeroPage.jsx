@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./HeroPage.scss";
 import Background from "../../images/hero.jpg";
 import "aos/dist/aos.css";
@@ -28,9 +29,9 @@ function HeroPage() {
               Воспользуйтесь конструктором для просчета эффективного
               светодиодного освещения под Ваш аквариум.
             </p>
-            <a href="#" className="hero__btn btn">
+            <Link to="/constructor" className="hero__btn btn">
               Собрать светильник
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -102,7 +103,7 @@ function HeroPage() {
           </div>
           <div className="slider__info">
             <p>
-              Больше работ у нас на <a href="#">авквафоруме</a>
+              Больше работ у нас на <Link to="/forum">авквафоруме</Link>
             </p>
           </div>
         </div>
@@ -209,7 +210,9 @@ function HeroPage() {
               Возпользуйся конструктором в который мы перенесли весь наш опыт и
               знания
             </p>
-            <a className="ref__button btn">Собрать светильник</a>
+            <Link to="/contructor" className="ref__button btn">
+              Собрать светильник
+            </Link>
           </div>
         </div>
       </section>
@@ -219,15 +222,21 @@ function HeroPage() {
           <div className="footer__row">
             <div>
               <i className="fas fa-mobile-alt"></i>
-              <a className="fotter__inf">+38 (095) 249-77-51</a>
+              <Link to="#" className="fotter__inf">
+                +38 (095) 249-77-51
+              </Link>
             </div>
             <div>
               <i className="fas fa-envelope"></i>
-              <a className="fotter__inf">info@aquazis.com</a>
+              <Link to="#" className="fotter__inf">
+                info@aquazis.com
+              </Link>
             </div>
             <div>
               <i className="fas fa-map-marker-alt"></i>
-              <a className="fotter__inf">Ukraine, Kiev</a>
+              <Link to="#" className="fotter__inf">
+                Ukraine, Kiev
+              </Link>
             </div>
           </div>
         </div>

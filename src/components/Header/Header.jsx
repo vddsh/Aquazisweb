@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,9 +16,9 @@ function Header() {
       <header className="header">
         <div className="container">
           <div className="header__body">
-            <a href="" className="header__logo">
+            <Link to="/" className="header__logo">
               Aquazis
-            </a>
+            </Link>
             <div
               className={showMenu ? "header__burger active" : "header__burger"}
               onClick={() => setShowMenu(!showMenu)}
@@ -27,33 +28,33 @@ function Header() {
             <nav className={showMenu ? "header__menu active" : "header__menu"}>
               <ul className="header__list">
                 <li>
-                  <a href="" className="header__link">
+                  <Link to="/" className="header__link">
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__link">
+                  <Link to="/forum" className="header__link">
                     Аква-форум
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__link">
+                  <Link to="/constructor" className="header__link">
                     {" "}
                     Конструктор
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__link header__link-phone">
+                  <Link to="#" className="header__link header__link-phone">
                     {" "}
                     +38 (095) 249-77-51
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
             <div className="header__phone">
-              <a href="" className="header__phone-number">
+              <Link to="#" className="header__phone-number">
                 +38 (095) 249-77-51
-              </a>
+              </Link>
             </div>
           </div>
         </div>
