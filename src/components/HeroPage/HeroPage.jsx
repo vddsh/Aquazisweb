@@ -210,7 +210,7 @@ function HeroPage() {
               Возпользуйся конструктором в который мы перенесли весь наш опыт и
               знания
             </p>
-            <Link to="/contructor" className="ref__button btn">
+            <Link to="/constructor" className="ref__button btn">
               Собрать светильник
             </Link>
           </div>

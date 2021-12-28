@@ -2,6 +2,7 @@
   transform: scale(0.7);
   transition: transform 300ms;
   opacity: 0.5;
+  height: 400px;
 }
 
 .slideWrapper {
@@ -11,7 +12,7 @@
 
 .prevArrow {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 0px;
   cursor: pointer;
   font-size: 2rem;
@@ -19,7 +20,7 @@
 
 .nextArrow {
   position: absolute;
-  top: 20%;
+  top: 30%;
   right: 0px;
   z-index: 100;
   cursor: pointer;
@@ -32,6 +33,5 @@
   z-index: 1;
 }
 
-.slick-slider {
-  overflow: none;
+.slicl-list {
 }
