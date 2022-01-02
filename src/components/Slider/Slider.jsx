@@ -93,19 +93,19 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
   };
 
   const templateImages = images.map((image, idx) => {
-    if (image !== null) {
-      return (
-        <div
-          className={idx === imageIndex ? "activeSlide" : "slide"}
-          key={image.id}
-        >
-          <div className="slideWrapper">
-            {image.code ? image.code : <img src={image.src} alt={image.alt} />}
-          </div>
-        </div>
-      );
+    if (image == null) {
+      return null;
     }
-    return null;
+    return (
+      <div
+        className={idx === imageIndex ? "activeSlide" : "slide"}
+        key={image.id}
+      >
+        <div className="slideWrapper">
+          {image.code ? image.code : <img src={image.src} alt={image.alt} />}
+        </div>
+      </div>
+    );
   });
 
   return <Slider {...settings}>{templateImages}</Slider>;
