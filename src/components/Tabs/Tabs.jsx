@@ -1,17 +1,32 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import "./Tabs.scss";
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [length, setLength] = useState();
+  const [innerlength, setInnerLength] = useState();
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
+  console.log(toggleState);
+
+  const checkValue = (event) => {
+    if (event.target.value <= 300) event.target.value = 300;
+  };
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
   const toggleButton = () => {
-    setToggleState(toggleState + 1);
+    if (
+      toggleState == 1 &&
+      length.length !== 0 &&
+      innerlength.length !== 0 &&
+      width.length !== 0 &&
+      height.length !== 0
+    ) {
+      setToggleState(toggleState + 1);
+    } else {
+    }
   };
 
   return (
@@ -23,25 +38,89 @@ function Tabs() {
               className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(1)}
             >
-              Размеры
+              <div className="tabs__row-box">
+                <div className="tabs__button-row">
+                  <div
+                    className={
+                      toggleState === 1
+                        ? "tabs__img-bg tabs__img-bg-active "
+                        : "tabs__img-bg"
+                    }
+                  >
+                    <i class="fas fa-ruler"></i>
+                  </div>
+                </div>
+                <div className="tabs__button-row">
+                  <div className="tabs__button-head">Размеры</div>
+                  <div className="tabs__button-text">Шаг 1</div>
+                </div>
+              </div>
             </button>
             <button
               className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(2)}
             >
-              Категория
+              <div className="tabs__row-box">
+                <div className="tabs__button-row">
+                  <div
+                    className={
+                      toggleState === 2
+                        ? "tabs__img-bg tabs__img-bg-active "
+                        : "tabs__img-bg"
+                    }
+                  >
+                    <i class="fas fa-image"></i>
+                  </div>
+                </div>
+                <div className="tabs__button-row">
+                  <div className="tabs__button-head">Категория</div>
+                  <div className="tabs__button-text">Шаг 2</div>
+                </div>
+              </div>
             </button>
             <button
               className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(3)}
             >
-              Инсталяция
+              <div className="tabs__row-box">
+                <div className="tabs__button-row">
+                  <div
+                    className={
+                      toggleState === 3
+                        ? "tabs__img-bg tabs__img-bg-active "
+                        : "tabs__img-bg"
+                    }
+                  >
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                </div>
+                <div className="tabs__button-row">
+                  <div className="tabs__button-head">Инсталяция</div>
+                  <div className="tabs__button-text">Шаг 3</div>
+                </div>
+              </div>
             </button>
             <button
               className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(4)}
             >
-              Параметры
+              <div className="tabs__row-box">
+                <div className="tabs__button-row">
+                  <div
+                    className={
+                      toggleState === 4
+                        ? "tabs__img-bg tabs__img-bg-active "
+                        : "tabs__img-bg"
+                    }
+                  >
+                    <i class="fas fa-cog"></i>
+                  </div>
+                </div>
+                <div className="tabs__button-row">
+                  <div className="tabs__button-head">Параметры</div>
+                  <div className="tabs__button-text">Шаг 1</div>
+                </div>
+              </div>
             </button>
           </div>
 
@@ -58,39 +137,59 @@ function Tabs() {
                   </div>
                   <div className="size__inputs">
                     <h3>Размеры вашего аквариума</h3>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                      <input {...register("length")} placeholder="Длина" />
-                      <div className="size__inputs-aftersize">
-                        <span>мм</span>
-                      </div>
-                      <input
-                        {...register("innerLength")}
-                        placeholder="Внутреняя длина"
-                      />
-                      <div className="size__inputs-aftersize">
-                        {" "}
-                        <span>мм</span>
-                      </div>
-                      <input {...register("width")} placeholder="Ширина" />
-                      <div className="size__inputs-aftersize">
-                        {" "}
-                        <span>мм</span>
-                      </div>
-                      <input {...register("heigth")} placeholder="Высота" />
-                      <div className="size__inputs-aftersize">
-                        {" "}
-                        <span>мм</span>
-                      </div>
-                      <div className="size__btn-row">
-                        <button
-                          type="submit"
-                          className="size__btn"
-                          onClick={toggleButton}
-                        >
-                          Дальше
-                        </button>
-                      </div>
-                    </form>
+
+                    <input
+                      placeholder="Длина"
+                      name="length"
+                      type="number"
+                      onBlur={checkValue}
+                      onChange={(event) => setLength(event.target.value)}
+                    />
+                    <div className="size__inputs-aftersize">
+                      <span>мм</span>
+                    </div>
+                    <input
+                      placeholder="Внутреняя длина"
+                      name="innerLength"
+                      type="number"
+                      onBlur={checkValue}
+                      onChange={(event) => setInnerLength(event.target.value)}
+                    />
+                    <div className="size__inputs-aftersize">
+                      {" "}
+                      <span>мм</span>
+                    </div>
+                    <input
+                      placeholder="Ширина"
+                      name="width"
+                      type="number"
+                      onBlur={checkValue}
+                      onChange={(event) => setWidth(event.target.value)}
+                    />
+                    <div className="size__inputs-aftersize">
+                      {" "}
+                      <span>мм</span>
+                    </div>
+                    <input
+                      placeholder="Высота"
+                      name="height"
+                      type="number"
+                      onBlur={checkValue}
+                      onChange={(event) => setHeight(event.target.value)}
+                    />
+                    <div className="size__inputs-aftersize">
+                      {" "}
+                      <span>мм</span>
+                    </div>
+                    <div className="size__btn-row">
+                      <button
+                        type="submit"
+                        className="size__btn"
+                        onClick={toggleButton}
+                      >
+                        Дальше
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

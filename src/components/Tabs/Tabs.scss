@@ -24,6 +24,7 @@
   cursor: pointer;
   position: relative;
   outline: none;
+  justify-content: center;
 }
 .tabs:not(:last-child) {
   border-right: 1px solid rgba(0, 0, 0, 0.274);
@@ -37,7 +38,39 @@
 .content-tabs {
   flex-grow: 1;
 }
+.tabs__row-box {
+  display: flex;
+  justify-content: center;
+}
+.tabs__button-head {
+  font-size: 18px;
+}
+.tabs__button-row {
+  align-items: center;
+  padding: 0px 5px;
+}
+.tabs__button-row i {
+  font-size: 25px;
+}
+.tabs__img-bg {
+  margin-top: 5px;
+  height: 35px;
+  width: 35px;
+  // background-color: #ffbc6f;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+.tabs__img-bg-active {
+  background-color: #ffbc6f;
+}
 
+.tabs__button-text {
+  font-size: 14px;
+  color: #c8c8c8;
+}
 .size__row {
   display: flex;
   flex-wrap: wrap;
