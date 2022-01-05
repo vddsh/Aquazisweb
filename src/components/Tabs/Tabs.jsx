@@ -16,18 +16,6 @@ function Tabs() {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-  const toggleButton = () => {
-    if (
-      toggleState == 1 &&
-      length.length !== 0 &&
-      innerlength.length !== 0 &&
-      width.length !== 0 &&
-      height.length !== 0
-    ) {
-      setToggleState(toggleState + 1);
-    } else {
-    }
-  };
 
   return (
     <div className="constructor__page">
@@ -185,7 +173,7 @@ function Tabs() {
                       <button
                         type="submit"
                         className="size__btn"
-                        onClick={toggleButton}
+                        // onClick={toggleButton}
                       >
                         Дальше
                       </button>

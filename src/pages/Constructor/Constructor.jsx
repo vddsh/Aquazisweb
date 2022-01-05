@@ -6,7 +6,7 @@ import ContactForm from "../../components/Tabs/ContactForm";
 function Constructor() {
   return (
     <div className="constructor">
-      <ContactForm />
+      <Tabs />
     </div>
   );
 }

@@ -2,6 +2,12 @@ import React, { useState } from "react";
 
 //Import Steps//
 import { useContactFormState } from "./ContactFormContext";
+import StepSize from "./steps/StepSize/StepSize";
+import StepCategories from "./steps/StepCategories/StepCategories";
+import StepParameters from "./steps/StepParameters/StepParameters";
+import StepInstallation from "./steps/StepInstallation/StepInstallation";
+import Page from "./ui/Page/Page";
+import Container from "./ui/Container/Container";
 
 const useFormProgress = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -17,7 +23,7 @@ const useFormProgress = () => {
   return [currentStep, goNext, goBack];
 };
 
-function ContactForm() {
+const ContactForm = () => {
   const { dispatch, state } = useContactFormState();
   const steps = [
     <StepSize />,
@@ -29,39 +35,39 @@ function ContactForm() {
   const [currentStep, goNext, goBack] = useFormProgress();
   const isFirst = currentStep === 0;
   const isLast = currentStep === steps.length - 1;
-}
 
-const handleSubmit = () => {
-  dispatch({ type: "SUBMIT" });
+  const handleSubmit = () => {
+    dispatch({ type: "SUBMIT" });
 
-  // setTimeout(() => {
-  //   dispatch({});
-  // });
+    // setTimeout(() => {
+    //   dispatch({});
+    // });
+  };
 
-  if (state.isSubmitLoading) {
-    return (
-      <div>
-        <p>Loading...</p>
-      </div>
-    );
-  }
+  //   if (state.isSubmitLoading) {
+  //     return (
+  //       <div>
+  //         <p>Loading...</p>
+  //       </div>
+  //     );
+  //   }
 
-  if (state.isSubmissionReceived) {
-    return (
-      <div className="App">
-        <h1>Грузится ссылка по фечу</h1>
-        <pre style={{ textAlign: "left" }}>
-          {JSON.stringify(state, null, 2)}
-        </pre>
-      </div>
-    );
-  }
+  //   if (state.isSubmissionReceived) {
+  //     return (
+  //       <div className="App">
+  //         <h1>Грузится ссылка по фечу</h1>
+  //         <pre style={{ textAlign: "left" }}>
+  //           {JSON.stringify(state, null, 2)}
+  //         </pre>
+  //       </div>
+  //     );
+  //   }
 
   return (
-    <Container>
-      {steps[currentStep]}
+    <Page>
+      <Container>
+        {steps[currentStep]}
 
-      <NavButtonContainer>
         {!isFirst && <button onClick={() => goBack()}>Go Back</button>}
 
         <button
@@ -78,8 +84,8 @@ const handleSubmit = () => {
         >
           {isLast ? "Submit" : "Next"}
         </button>
-      </NavButtonContainer>
-    </Container>
+      </Container>
+    </Page>
   );
 };
 export default ContactForm;
