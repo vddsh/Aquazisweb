@@ -30,10 +30,10 @@ function formReducer(state, action) {
 const ContactFormContext = createContext();
 
 const initialState = {
-  length: 0,
-  innnerLength: 0,
-  width: 0,
-  heigth: 0,
+  length: "",
+  innnerLength: "",
+  width: "",
+  heigth: "",
 
   categories: "",
   installation: "",

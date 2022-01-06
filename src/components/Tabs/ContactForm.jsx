@@ -8,6 +8,7 @@ import StepParameters from "./steps/StepParameters/StepParameters";
 import StepInstallation from "./steps/StepInstallation/StepInstallation";
 import "./ContactForm.scss";
 import { Page } from "./steps/ui/Page/Page";
+import { Form } from "./steps/ui/Form/Form";
 
 const useFormProgress = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -65,23 +66,28 @@ const ContactForm = () => {
 
   return (
     <Page>
-      {" "}
-      {steps[currentStep]}
-      {!isFirst && <button onClick={() => goBack()}>Go Back</button>}
-      <button
-        type="submit"
-        onClick={(e) => {
-          e.preventDefault();
+      <Form>
+        {" "}
+        {steps[currentStep]}
+        {!isFirst && <button onClick={() => goBack()}>Назад</button>}
+        <div className="submit__btn-row">
+          <button
+            className="submit__btn"
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
 
-          if (isLast) {
-            handleSubmit();
-          } else {
-            goNext();
-          }
-        }}
-      >
-        {isLast ? "Submit" : "Next"}
-      </button>
+              if (isLast) {
+                handleSubmit();
+              } else {
+                goNext();
+              }
+            }}
+          >
+            {isLast ? "Submit" : "Дальше"}
+          </button>
+        </div>
+      </Form>
     </Page>
   );
 };
