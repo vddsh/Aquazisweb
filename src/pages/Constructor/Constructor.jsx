@@ -1,13 +1,12 @@
-import "./Constructor.scss";
 import React from "react";
-import Tabs from "../../components/Tabs/Tabs";
 import ContactForm from "../../components/Tabs/ContactForm";
+import { ContactFormProvider } from "../../components/Tabs/ContactFormContext";
 
 function Constructor() {
   return (
-    <div className="constructor">
-      <Tabs />
-    </div>
+    <ContactFormProvider>
+      <ContactForm />
+    </ContactFormProvider>
   );
 }
 

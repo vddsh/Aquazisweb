@@ -6,7 +6,7 @@ function formReducer(state, action) {
       return { ...state, length: action.payload };
     case "INNERLENGTH_CHANGE":
       return { ...state, innnerLength: action.payload };
-    case "WIDTH_ CHANGE":
+    case "WIDTH_CHANGE":
       return { ...state, width: action.payload };
     case "HEIGHT_CHANGE":
       return { ...state, heigth: action.payload };

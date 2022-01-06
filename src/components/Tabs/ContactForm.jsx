@@ -6,8 +6,8 @@ import StepSize from "./steps/StepSize/StepSize";
 import StepCategories from "./steps/StepCategories/StepCategories";
 import StepParameters from "./steps/StepParameters/StepParameters";
 import StepInstallation from "./steps/StepInstallation/StepInstallation";
-import Page from "./ui/Page/Page";
-import Container from "./ui/Container/Container";
+import "./ContactForm.scss";
+import { Page } from "./steps/ui/Page/Page";
 
 const useFormProgress = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -44,47 +44,44 @@ const ContactForm = () => {
     // });
   };
 
-  //   if (state.isSubmitLoading) {
-  //     return (
-  //       <div>
-  //         <p>Loading...</p>
-  //       </div>
-  //     );
-  //   }
+  if (state.isSubmitLoading) {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
-  //   if (state.isSubmissionReceived) {
-  //     return (
-  //       <div className="App">
-  //         <h1>Грузится ссылка по фечу</h1>
-  //         <pre style={{ textAlign: "left" }}>
-  //           {JSON.stringify(state, null, 2)}
-  //         </pre>
-  //       </div>
-  //     );
-  //   }
+  if (state.isSubmissionReceived) {
+    return (
+      <div className="App">
+        <h1>Грузится ссылка по фечу</h1>
+        <pre style={{ textAlign: "left" }}>
+          {JSON.stringify(state, null, 2)}
+        </pre>
+      </div>
+    );
+  }
 
   return (
     <Page>
-      <Container>
-        {steps[currentStep]}
+      {" "}
+      {steps[currentStep]}
+      {!isFirst && <button onClick={() => goBack()}>Go Back</button>}
+      <button
+        type="submit"
+        onClick={(e) => {
+          e.preventDefault();
 
-        {!isFirst && <button onClick={() => goBack()}>Go Back</button>}
-
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-
-            if (isLast) {
-              handleSubmit();
-            } else {
-              goNext();
-            }
-          }}
-        >
-          {isLast ? "Submit" : "Next"}
-        </button>
-      </Container>
+          if (isLast) {
+            handleSubmit();
+          } else {
+            goNext();
+          }
+        }}
+      >
+        {isLast ? "Submit" : "Next"}
+      </button>
     </Page>
   );
 };
