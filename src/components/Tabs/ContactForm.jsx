@@ -41,8 +41,8 @@ const ContactForm = () => {
     dispatch({ type: "SUBMIT" });
 
     // setTimeout(() => {
-    //   dispatch({});
-    // });
+    //   dispatch({ type: "SUBMISSION_RECEIVED" });
+    // }, 1500);
   };
 
   if (state.isSubmitLoading) {
@@ -67,25 +67,30 @@ const ContactForm = () => {
   return (
     <Page>
       <Form>
-        {" "}
-        {steps[currentStep]}
-        {!isFirst && <button onClick={() => goBack()}>Назад</button>}
-        <div className="submit__btn-row">
-          <button
-            className="submit__btn"
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
+        <div className="contactform__items">{steps[currentStep]}</div>
+        <div className="contactform__btns">
+          <div className="submit__btn-row">
+            {!isFirst && (
+              <button className="submit__btn-back" onClick={() => goBack()}>
+                Назад
+              </button>
+            )}
+            <button
+              className="submit__btn"
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
 
-              if (isLast) {
-                handleSubmit();
-              } else {
-                goNext();
-              }
-            }}
-          >
-            {isLast ? "Submit" : "Дальше"}
-          </button>
+                if (isLast) {
+                  handleSubmit();
+                } else {
+                  goNext();
+                }
+              }}
+            >
+              {isLast ? "Просчитать" : "Дальше"}
+            </button>
+          </div>
         </div>
       </Form>
     </Page>
