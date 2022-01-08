@@ -9,9 +9,9 @@ function StepInstallation() {
   } = useContactFormState();
   return (
     <div>
-      <div className="tab__row">
-        <div className="tab__box">
-          <label>
+      <div className="installation__row">
+        <div className="installation__box">
+          <label className={installation === "Nerjav" ? "checked" : ""}>
             <input
               type="radio"
               id="1"
@@ -31,8 +31,8 @@ function StepInstallation() {
             </div>
           </label>
         </div>
-        <div className="tab__box">
-          <label>
+        <div className="installation__box">
+          <label className={installation === "Podves" ? "checked" : ""}>
             <input
               type="radio"
               id="2"
@@ -52,8 +52,8 @@ function StepInstallation() {
             </div>
           </label>
         </div>
-        <div className="tab__box">
-          <label>
+        <div className="installation__box">
+          <label className={installation === "Acril1" ? "checked" : ""}>
             <input
               type="radio"
               id="3"
@@ -73,8 +73,8 @@ function StepInstallation() {
             </div>
           </label>
         </div>
-        <div className="tab__box">
-          <label>
+        <div className="installation__box">
+          <label className={installation === "Acril2" ? "checked" : ""}>
             <input
               type="radio"
               id="4"

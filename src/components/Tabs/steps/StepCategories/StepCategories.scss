@@ -7,8 +7,7 @@
 
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  padding: 0px 12px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -18,7 +17,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 14px 12px;
   transition: 0.3s;
 }
 
@@ -36,9 +35,9 @@
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
   flex-wrap: wrap;
+  overflow: visible;
 }
 
 .active {
@@ -49,16 +48,25 @@
 .tab__row {
   display: flex;
   justify-content: flex-start;
+  overflow: visible;
 }
 .tab__box {
   display: flex;
   max-width: 30%;
   padding: 10px;
   position: relative;
+  overflow: visible;
 }
 
 .tab__box label {
   position: relative;
+  overflow: visible;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+.checked {
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
 }
 
 .tab__box input {
@@ -70,6 +78,7 @@
 }
 .tab__box img {
   width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .tab__box h6 {

@@ -17,11 +17,11 @@ export default function StepCategories() {
 
   return (
     <div className="categories__row">
-      <div class="tab">
-        <button class="tablinks" onClick={() => toggleTab(1)}>
+      <div className="tab">
+        <button className="tablinks" onClick={() => toggleTab(1)}>
           Пресноводный
         </button>
-        <button class="tablinks" onClick={() => toggleTab(2)}>
+        <button className="tablinks" onClick={() => toggleTab(2)}>
           Морской
         </button>
       </div>
@@ -29,7 +29,7 @@ export default function StepCategories() {
       <div className={active === 1 ? "tabcontent active" : "tabcontent"}>
         <div className="tab__row">
           <div className="tab__box">
-            <label>
+            <label className={categories === "travnik" ? "checked" : ""}>
               <input
                 type="radio"
                 id="1"
@@ -43,14 +43,14 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div>
+              <div classname="categories__border">
                 <img src="./img/1.jpg" />
                 <h6>Травник</h6>
               </div>
             </label>
           </div>
           <div className="tab__box">
-            <label>
+            <label className={categories === "travnik2" ? "checked" : ""}>
               <input
                 type="radio"
                 id="2"
@@ -64,14 +64,14 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div>
+              <div classname="categories__border">
                 <img src="./img/2.jpg" />
                 <h6>Форсированный травник (СО2, УДО)</h6>
               </div>
             </label>
           </div>
           <div className="tab__box">
-            <label>
+            <label className={categories === "Cuhlidnik" ? "checked" : ""}>
               <input
                 type="radio"
                 id="3"
@@ -85,14 +85,14 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div>
+              <div classname="categories__border">
                 <img src="./img/3.jpg" />
                 <h6>Цихлидник (Америка)</h6>
               </div>
             </label>
           </div>
           <div className="tab__box">
-            <label>
+            <label className={categories === "Cuhlidnik2" ? "checked" : ""}>
               <input
                 type="radio"
                 id="4"
@@ -106,7 +106,7 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div>
+              <div classname="categories__border chosen">
                 <img src="./img/4.jpg" />
                 <h6>Цихлидник (Африка)</h6>
               </div>

@@ -1,0 +1,40 @@
+.installation__row {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  overflow: visible;
+}
+.installation__box {
+  display: flex;
+  max-width: 30%;
+  padding: 10px;
+  position: relative;
+  overflow: visible;
+}
+.installation__box label {
+  position: relative;
+  overflow: visible;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.installation__box input {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 5px;
+  top: 5px;
+}
+.installation__box img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.installation__box h6 {
+  padding: 10px 0px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 500;
+  line-height: 1.2;
+}
