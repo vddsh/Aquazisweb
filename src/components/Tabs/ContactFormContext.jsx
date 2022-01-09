@@ -16,6 +16,8 @@ function formReducer(state, action) {
       return { ...state, installation: action.payload };
     case "PROFILETYPE_CHANGE":
       return { ...state, profileType: action.payload };
+    case "PROFILE_COLOR":
+      return { ...state, profileColor: action.payload };
     case "PARAMETERS_CHANGE":
       return { ...state, parameters: action.payload };
     case "SUBMIT":
@@ -38,6 +40,7 @@ const initialState = {
   categories: "",
   installation: "",
   profileType: "",
+  profileColor: "",
   parameters: [],
 
   isSubmitLoading: false,

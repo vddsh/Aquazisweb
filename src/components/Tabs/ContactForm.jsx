@@ -40,9 +40,9 @@ const ContactForm = () => {
   const handleSubmit = () => {
     dispatch({ type: "SUBMIT" });
 
-    // setTimeout(() => {
-    //   dispatch({ type: "SUBMISSION_RECEIVED" });
-    // }, 1500);
+    setTimeout(() => {
+      dispatch({ type: "SUBMISSION_RECEIVED" });
+    }, 1500);
   };
 
   if (state.isSubmitLoading) {
