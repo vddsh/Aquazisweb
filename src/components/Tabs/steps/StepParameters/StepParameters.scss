@@ -1,0 +1,72 @@
+.parameters__row {
+  flex-wrap: wrap;
+  display: flex;
+}
+.parameters__diod {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.parameters__diod p {
+  display: inline;
+}
+.parameters__diod input {
+  display: inline;
+  margin-right: 5px;
+}
+.parameters__diod h6 {
+  margin: 20px 0px;
+  font-size: 1.15rem;
+}
+.parameters__profile {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.parameteres__head {
+  font-size: 1.5rem;
+}
+.profile__color-box {
+  display: inline-block;
+}
+.profile__color-box input {
+  position: absolute;
+  z-index: 1;
+  height: 17px;
+  width: 17px;
+}
+.parameters__profile h6 {
+  font-size: 1.25rem;
+  margin: 20px 0px;
+}
+.parameters__profile select {
+  border: solid 1px #ececec;
+  min-height: 50px;
+  width: 350px;
+  display: inline;
+  margin: 10px 0px;
+  padding-left: 20px;
+}
+.parameters__profile option {
+}
+.parameters__options {
+  margin-left: 50%;
+}
+.parameters__options h6 {
+  font-size: 1.25rem;
+  margin: 20px 0px;
+}
+.profile__color-box label {
+  cursor: pointer;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 50px;
+}
+
+.profile__black {
+  background-color: #000000d4;
+}
+.profile__grey {
+  background-color: silver;
+  margin-right: 5px;
+}
