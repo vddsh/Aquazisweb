@@ -95,3 +95,12 @@
 .content__input {
   border: 1px solid;
 }
+
+@media (max-width: 768px) {
+  .tabs__button-head {
+    display: none;
+  }
+  .tabs__button-text {
+    display: none;
+  }
+}
