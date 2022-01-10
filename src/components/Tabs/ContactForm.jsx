@@ -21,7 +21,7 @@ const useFormProgress = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  return [currentStep, goNext, goBack];
+  return [currentStep, goNext, goBack, setCurrentStep];
 };
 
 const ContactForm = () => {
@@ -33,7 +33,7 @@ const ContactForm = () => {
     <StepParameters />,
   ];
 
-  const [currentStep, goNext, goBack] = useFormProgress();
+  const [currentStep, goNext, goBack, setCurrentStep] = useFormProgress();
   const isFirst = currentStep === 0;
   const isLast = currentStep === steps.length - 1;
 
@@ -66,7 +66,7 @@ const ContactForm = () => {
 
   return (
     <Page>
-      <Form>
+      <Form onChange={(value) => setCurrentStep(value)}>
         <div className="contactform__items">{steps[currentStep]}</div>
         <div className="contactform__btns">
           <div className="submit__btn-row">
