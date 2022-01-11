@@ -5,7 +5,10 @@ export const Form = (props) => {
   return (
     <div className="tabs__row">
       <div className="bloc-tabs">
-        <button className="tabs" onClick={() => props.onChange(0)}>
+        <button
+          className={props.currentStep == 0 ? "tabs active-tabs" : "tabs"}
+          onClick={() => props.onChange(0)}
+        >
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
@@ -18,7 +21,10 @@ export const Form = (props) => {
             </div>
           </div>
         </button>
-        <button className="tabs" onClick={() => props.onChange(1)}>
+        <button
+          className={props.currentStep == 1 ? "tabs active-tabs" : "tabs"}
+          onClick={() => props.onChange(1)}
+        >
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
@@ -31,7 +37,10 @@ export const Form = (props) => {
             </div>
           </div>
         </button>
-        <button className="tabs" onClick={() => props.onChange(2)}>
+        <button
+          className={props.currentStep == 2 ? "tabs active-tabs" : "tabs"}
+          onClick={() => props.onChange(2)}
+        >
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
@@ -44,7 +53,10 @@ export const Form = (props) => {
             </div>
           </div>
         </button>
-        <button className="tabs" onClick={() => props.onChange(3)}>
+        <button
+          className={props.currentStep == 3 ? "tabs active-tabs" : "tabs"}
+          onClick={() => props.onChange(3)}
+        >
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">

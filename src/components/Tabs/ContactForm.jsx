@@ -66,7 +66,10 @@ const ContactForm = () => {
 
   return (
     <Page>
-      <Form onChange={(value) => setCurrentStep(value)}>
+      <Form
+        onChange={(value) => setCurrentStep(value)}
+        currentStep={currentStep}
+      >
         <div className="contactform__items">{steps[currentStep]}</div>
         <div className="contactform__btns">
           <div className="submit__btn-row">
