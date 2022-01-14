@@ -3,11 +3,15 @@ import "./StepSize.scss";
 
 import { useContactFormState } from "../../ContactFormContext";
 
+export let isValidSize = false;
+
 export default function StepSize() {
   const {
     state: { length, innerLength, width, height },
     dispatch,
   } = useContactFormState();
+
+  if (length && innerLength && width && height) isValidSize = true;
 
   return (
     <>

@@ -3,7 +3,7 @@
   display: flex;
 }
 .parameters__diod {
-  max-width: 50%;
+  width: 50%;
   flex: 0 0 50%;
 }
 .parameters__diod p {
@@ -18,7 +18,7 @@
   font-size: 1.15rem;
 }
 .parameters__profile {
-  max-width: 50%;
+  width: 50%;
   flex: 0 0 50%;
 }
 .parameteres__head {
@@ -69,4 +69,17 @@
 .profile__grey {
   background-color: silver;
   margin-right: 5px;
+}
+@media (max-width: 768px) {
+  .parameters__diod {
+    width: 100%;
+    flex: 0 1 auto;
+  }
+  .parameters__profile {
+    width: 100%;
+    flex: 0 1 auto;
+  }
+  .parameters__options {
+    margin-left: 0%;
+  }
 }

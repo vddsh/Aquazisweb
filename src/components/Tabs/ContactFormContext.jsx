@@ -5,11 +5,11 @@ function formReducer(state, action) {
     case "LENGTH_CHANGE":
       return { ...state, length: action.payload };
     case "INNERLENGTH_CHANGE":
-      return { ...state, innnerLength: action.payload };
+      return { ...state, innerLength: action.payload };
     case "WIDTH_CHANGE":
       return { ...state, width: action.payload };
     case "HEIGHT_CHANGE":
-      return { ...state, heigth: action.payload };
+      return { ...state, height: action.payload };
     case "CATEGORIES_CHANGE":
       return { ...state, categories: action.payload };
     case "INSTALLATION_CHANGE":
@@ -33,9 +33,9 @@ const ContactFormContext = createContext();
 
 const initialState = {
   length: "",
-  innnerLength: "",
+  innerLength: "",
   width: "",
-  heigth: "",
+  height: "",
 
   categories: "",
   installation: "",

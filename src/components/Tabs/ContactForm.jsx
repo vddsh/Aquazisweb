@@ -9,6 +9,7 @@ import StepInstallation from "./steps/StepInstallation/StepInstallation";
 import "./ContactForm.scss";
 import { Page } from "./steps/ui/Page/Page";
 import { Form } from "./steps/ui/Form/Form";
+import { isValidSize } from "./steps/StepSize/StepSize";
 
 const useFormProgress = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -25,6 +26,7 @@ const useFormProgress = () => {
 };
 
 const ContactForm = () => {
+  console.log(isValidSize);
   const { dispatch, state } = useContactFormState();
   const steps = [
     <StepSize />,
@@ -56,7 +58,7 @@ const ContactForm = () => {
   if (state.isSubmissionReceived) {
     return (
       <div className="App">
-        <h1>Грузится ссылка по фечу</h1>
+        <h1>ссылка по фечу</h1>
         <pre style={{ textAlign: "left" }}>
           {JSON.stringify(state, null, 2)}
         </pre>
@@ -79,6 +81,7 @@ const ContactForm = () => {
               </button>
             )}
             <button
+              // disabled={!isValidSize}
               className="submit__btn"
               type="submit"
               onClick={(e) => {

@@ -1,7 +1,6 @@
 import "./Form.scss";
 
 export const Form = (props) => {
-  console.log(props);
   return (
     <div className="tabs__row">
       <div className="bloc-tabs">
@@ -12,7 +11,7 @@ export const Form = (props) => {
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
-                <i class="fas fa-ruler"></i>
+                <i className="fas fa-ruler"></i>
               </div>
             </div>
             <div className="tabs__button-row">
@@ -28,7 +27,7 @@ export const Form = (props) => {
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
-                <i class="fas fa-image"></i>
+                <i className="fas fa-image"></i>
               </div>
             </div>
             <div className="tabs__button-row">
@@ -44,7 +43,7 @@ export const Form = (props) => {
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
-                <i class="fas fa-lightbulb"></i>
+                <i className="fas fa-lightbulb"></i>
               </div>
             </div>
             <div className="tabs__button-row">
@@ -60,7 +59,7 @@ export const Form = (props) => {
           <div className="tabs__row-box">
             <div className="tabs__button-row">
               <div className="tabs__img-bg tabs__img-bg-active ">
-                <i class="fas fa-cog"></i>
+                <i className="fas fa-cog"></i>
               </div>
             </div>
             <div className="tabs__button-row">

@@ -30,3 +30,20 @@
   font-weight: bold;
   margin-right: 20px;
 }
+
+@media (max-width: 768px) {
+  .submit_btn-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .submit__btn {
+    padding: 13px 30px;
+    width: 145px;
+    height: 50px;
+  }
+  .submit__btn-back {
+    padding: 13px 30px;
+    width: 145px;
+    height: 50px;
+  }
+}

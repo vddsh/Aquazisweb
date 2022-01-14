@@ -63,7 +63,6 @@ function StepParameters() {
             }
           >
             <option value="bioled">Bioled</option>
-            <hr />
             <option value="b52-2">B52-2</option>
           </select>
         </div>

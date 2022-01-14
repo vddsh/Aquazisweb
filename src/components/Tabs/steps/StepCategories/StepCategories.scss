@@ -47,13 +47,12 @@
 
 .tab__row {
   display: flex;
-  justify-content: flex-start;
   overflow: visible;
   flex-wrap: wrap;
 }
 .tab__box {
   display: flex;
-  max-width: 30%;
+  width: 33%;
   padding: 10px;
   position: relative;
   overflow: visible;
@@ -91,4 +90,17 @@
 }
 
 @media (max-width: 768px) {
+  .tab__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .tab {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contactform__btns {
+    padding-top: 20px;
+  }
 }

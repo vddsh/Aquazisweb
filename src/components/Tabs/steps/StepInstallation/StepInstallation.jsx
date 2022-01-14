@@ -8,7 +8,7 @@ function StepInstallation() {
     dispatch,
   } = useContactFormState();
   return (
-    <div>
+    <div className="installation__wrap">
       <div className="installation__row">
         <div className="installation__box">
           <label className={installation === "Nerjav" ? "checked" : ""}>

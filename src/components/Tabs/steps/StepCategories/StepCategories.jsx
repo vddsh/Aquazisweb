@@ -17,14 +17,14 @@ export default function StepCategories() {
 
   return (
     <div className="categories__row">
-      <div className="tab">
+      {/* <div className="tab">
         <button className="tablinks" onClick={() => toggleTab(1)}>
           Пресноводный
         </button>
         <button className="tablinks" onClick={() => toggleTab(2)}>
           Морской
         </button>
-      </div>
+      </div> */}
 
       <div className={active === 1 ? "tabcontent active" : "tabcontent"}>
         <div className="tab__row">
@@ -43,7 +43,7 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div classname="categories__border">
+              <div className="categories__border">
                 <img src="./img/1.jpg" />
                 <h6>Травник</h6>
               </div>
@@ -64,7 +64,7 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div classname="categories__border">
+              <div className="categories__border">
                 <img src="./img/2.jpg" />
                 <h6>Форсированный травник (СО2, УДО)</h6>
               </div>
@@ -85,7 +85,7 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div classname="categories__border">
+              <div className="categories__border">
                 <img src="./img/3.jpg" />
                 <h6>Цихлидник (Америка)</h6>
               </div>
@@ -106,7 +106,7 @@ export default function StepCategories() {
                   })
                 }
               />
-              <div classname="categories__border chosen">
+              <div className="categories__border chosen">
                 <img src="./img/4.jpg" />
                 <h6>Цихлидник (Африка)</h6>
               </div>
