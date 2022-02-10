@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import "./Register.scss";
 import { TextField } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 function Register() {
   const schema = yup.object().shape({
@@ -62,7 +63,7 @@ function Register() {
     <div className="reg__wrapper">
       <div className="container">
         <div className="reg__box">
-          <h3 className="reg__head">Регистрация</h3>
+          <h3 className="reg__head">Registration</h3>
           <form onSubmit={handleSubmit(onSubmit)} className="reg__form">
             <div className="reg__inputs">
               <Controller
@@ -141,7 +142,16 @@ function Register() {
                 )}
               />
             </div>
-            <input className="reg__submit" type="submit" disabled={!isValid} />
+            <div className="reg__btn">
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                disabled={!isValid}
+              >
+                Отправить
+              </Button>
+            </div>
           </form>
         </div>
       </div>
