@@ -9,7 +9,6 @@ import StepInstallation from "./steps/StepInstallation/StepInstallation";
 import "./ContactForm.scss";
 import { Page } from "./steps/ui/Page/Page";
 import { Form } from "./steps/ui/Form/Form";
-import { isValidSize } from "./steps/StepSize/StepSize";
 
 const useFormProgress = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -26,7 +25,6 @@ const useFormProgress = () => {
 };
 
 const ContactForm = () => {
-  console.log(isValidSize);
   const { dispatch, state } = useContactFormState();
   const steps = [
     <StepSize />,
@@ -81,7 +79,6 @@ const ContactForm = () => {
               </button>
             )}
             <button
-              // disabled={!isValidSize}
               className="submit__btn"
               type="submit"
               onClick={(e) => {

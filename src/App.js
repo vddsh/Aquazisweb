@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import Header from "./components/Header/Header";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import Constructor from "./pages/Constructor/Constructor";
+import Register from "./components/Register/Register";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/forum" element={<PageNotFound />} />
         <Route path="/constructor" element={<Constructor />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );
