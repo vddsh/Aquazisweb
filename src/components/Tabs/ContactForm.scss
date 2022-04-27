@@ -17,6 +17,10 @@
   color: #fff;
   font-weight: bold;
 }
+
+.submit__btn:disabled {
+  background-color: rgb(167, 167, 167);
+}
 .contactform__items {
   display: flex;
   flex-wrap: wrap;

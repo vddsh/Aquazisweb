@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./StepSize.scss";
 
 import { useContactFormState } from "../../ContactFormContext";
@@ -21,7 +21,10 @@ export default function StepSize() {
           label="length"
           name="length"
           onChange={(e) =>
-            dispatch({ type: "LENGTH_CHANGE", payload: e.target.value })
+            dispatch({
+              type: "LENGTH_CHANGE",
+              payload: e.target.value,
+            })
           }
           type="number"
           value={length}
@@ -34,7 +37,10 @@ export default function StepSize() {
           label="innerLength"
           name="innerLength"
           onChange={(e) =>
-            dispatch({ type: "INNERLENGTH_CHANGE", payload: e.target.value })
+            dispatch({
+              type: "INNERLENGTH_CHANGE",
+              payload: e.target.value,
+            })
           }
           type="number"
           value={innerLength}
@@ -47,7 +53,10 @@ export default function StepSize() {
           label="width"
           name="width"
           onChange={(e) =>
-            dispatch({ type: "WIDTH_CHANGE", payload: e.target.value })
+            dispatch({
+              type: "WIDTH_CHANGE",
+              payload: e.target.value,
+            })
           }
           type="number"
           value={width}
@@ -60,7 +69,10 @@ export default function StepSize() {
           label="height"
           name="height"
           onChange={(e) =>
-            dispatch({ type: "HEIGHT_CHANGE", payload: e.target.value })
+            dispatch({
+              type: "HEIGHT_CHANGE",
+              payload: e.target.value,
+            })
           }
           type="number"
           value={height}

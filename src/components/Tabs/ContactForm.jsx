@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //Import Steps//
 import { useContactFormState } from "./ContactFormContext";
@@ -25,7 +25,23 @@ const useFormProgress = () => {
 };
 
 const ContactForm = () => {
+  const [validationButton, setValidationButton] = useState(false);
   const { dispatch, state } = useContactFormState();
+
+  /* validation */
+  const {
+    state: {
+      length,
+      innerLength,
+      width,
+      height,
+      categories,
+      installation,
+      profileColor,
+    },
+  } = useContactFormState();
+  /* validation */
+
   const steps = [
     <StepSize />,
     <StepCategories />,
@@ -36,6 +52,16 @@ const ContactForm = () => {
   const [currentStep, goNext, goBack, setCurrentStep] = useFormProgress();
   const isFirst = currentStep === 0;
   const isLast = currentStep === steps.length - 1;
+
+  /* validation */
+  useEffect(() => {
+    if (0 < currentStep < 3 && length && innerLength && width && height) {
+      setValidationButton(true);
+    } else {
+      setValidationButton(false);
+    }
+  }, [length, innerLength, width, height]);
+  /* validation */
 
   const handleSubmit = () => {
     dispatch({ type: "SUBMIT" });
@@ -79,6 +105,7 @@ const ContactForm = () => {
               </button>
             )}
             <button
+              disabled={!validationButton}
               className="submit__btn"
               type="submit"
               onClick={(e) => {

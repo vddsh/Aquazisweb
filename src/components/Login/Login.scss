@@ -1,0 +1,44 @@
+.login__wrapper {
+  overflow: visible;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+}
+
+.login__box {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.25);
+  padding: 40px 40px;
+  width: 400px;
+}
+
+.login__form {
+  overflow: visible;
+  display: inline;
+  flex-wrap: wrap;
+}
+
+.MuiFormControl-root {
+  overflow: visible;
+}
+.login__inputs {
+  padding: 10px 0px;
+}
+
+.login__btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.login__head {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.MuiFormLabel-root {
+  overflow-y: hidden;
+}
